@@ -1,0 +1,6 @@
+name : Vikas B N
+DOB  :09-06-1994
+father's name : Nataraju B
+Address : no.18,2nd stage,nagarbhavi,bangalore=560091
+email id : vikas.bn@razorthink.net
+Ph No. : 8861277295
