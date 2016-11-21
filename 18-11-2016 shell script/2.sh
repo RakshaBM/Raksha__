@@ -1,16 +1,16 @@
 #!/bin/sh
 #2nd question
 
-echo "Enter the filename and its path"
-read file path
-#cd ~
-if [ -e $path/$file ]
+#echo "Enter the filename and its path"
+echo $1
+echo $2
+cd ~
+if [ -e $2/$1 ]
 then 
-rm $path/$file
+rm $2/$1
 else
-
 echo file not found. enter the arc name
 read arc
-tar -cf $arc.tar $path
+tar -cf $arc.tar $2
 fi
 
