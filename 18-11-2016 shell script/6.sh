@@ -2,8 +2,10 @@
 if [ -s $1 ];
 then
 cd $1
+ts= $2
 else
 cd .
+ts= txt
 fi
 ls -S > kf.txt
 cat kf.txt
@@ -20,7 +22,7 @@ rm -i $f
 fi
 cudr=$(pwd)
 gh=$(sed "s/\//-/" $cudr)
-rename 's/'$2'/ /g' *.* 
-mv $2 "Razorthink_${gh}"
+rename 's/'$ts'/ /g' *.* 
+mv $ts "Razorthink_${gh}"
 done
 
