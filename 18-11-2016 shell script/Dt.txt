@@ -1,0 +1,33 @@
+Question 2: 
+1. Searched what tiger tool does. what is security auditing.
+2. Downloaded tiger by
+	sudo apt-get install tiger command.
+3. after installation, ran the tiger using the command: 
+	sudo tiger
+4. After the check. Changed the directory to /var/log/tiger to check the report
+5. The report have the time stamp of when it was done.
+security.report.rzt518-Lenovo-G560.161125-13:07
+6. when an audit is going on these reports are in tmp form
+security.report.rzt518-Lenovo-G560.tmp.3552
+7. Used cat command to view the report.
+8. opened the crontab command to assign cron job for tiger to run every alternate days by 
+0 0 */2 * * sudo tiger
+using this command.
+9. MAILTO= raksha.bm@razorthink.net
+used this command in the cron tab for it to mail. 
+changed the schedule for tab to run every minute to check if the mail is being sent. 
+The var/log/tiger had reports being updated but no mail. Tried a different command 
+0 0 */2 * * sudo tiger |  mail -s "audit" raksha.bm@razorthink.net
+The mail just came once. Checked with friends. MAILTO command was working for them. Checked my syntax and got back to the MAILTO command. But this time placed the command above the scheduling line.
+This worked and started getting mail. changed the schedule to alternate days again.
+
+Question 3
+-Installed lynis through command line sudo apt-get install lynis
+-changed the directory to lynis directory and ran the lynis using ./lynis -c 
+-after the check, the Hardening index was at 53.
+- Updated the lynis software by cloning it from github.
+-put password age though chage. and installed debsums.
+-Created a folder /home/razorthink
+-The hardening index now is 70. 
+
+  
