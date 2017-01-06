@@ -1,0 +1,47 @@
+var snd={
+    "x-auth-password": "1BG08is024$",
+    "x-auth-domain": "razorthinkuniversity",
+    "x-auth-username": "karthik.b@razorthink.net"
+  }
+var settings = {
+  "async": true,
+  "crossDomain": true,
+  "url": "http://razorthinkuniversity.kickassteam.biz/rest/user/login",
+  "method": "POST",
+  "headers": {"hello":"hi"}
+}
+$.ajax({
+    url: "http://razorthinkuniversity.kickassteam.biz/rest/user/login",
+    headers: {
+         "x-auth-password": "1BG08is024$",
+         "x-auth-domain": "razorthinkuniversity",
+         "x-auth-username": "karthik.b@razorthink.net",
+        'Content-Type':'application/json'
+    },
+    method: 'POST',
+    dataType: 'json',
+crossDomain: true,
+    success: function(data){
+      console.log('succes: '+data);
+    }
+});
+
+
+
+/*var req = new XMLHttpRequest();
+req.open('GET', document.location, false);
+req.send(null);
+var headers = req.getAllResponseHeaders().toLowerCase();
+
+
+
+/*$http({method: 'POST', url: 'http://razorthinkuniversity.kickassteam.biz/rest/user/login', headers: {
+    "x-auth-password": "1BG08is024$",
+    "x-auth-domain": "razorthinkuniversity",
+    "x-auth-username": "karthik.b@razorthink.net"}
+});*/
+/*var req = new XMLHttpRequest();
+req.open('GET', document.location, false);
+req.send(null);
+var headers = req.getAllResponseHeaders().toLowerCase();
+alert(headers);*/
